@@ -1,12 +1,9 @@
 /**
- * In Manifest V3, menu entries are not unregistered, when the background is
- * terminated, even though the entries are no longer shown. A restarting background
- * or a restarting extension will therefore cause an error when it tries to re-add
- * the already existing entries. The addEntry() helper function of the used menus
- * module is mitigating this.
- *
- * Alternatively, add menu entries only in the onInstalled event, as done for the
- * entries overriding the context menu of action popups below.
+We need to create 2 menu items. In either case, they invoke the onClicked listener. 
+There is 1 onClicked listener PER ADDON, so both commands run through it. From there, 
+we can use a dictionary to lookup each message header ID and store the message length. 
+This allows us to feel really confident that any messages getting deleted really match.
+Thunderbird will generate its own MD5 message header if the email doesn't have its own.
  */
 
 browser.runtime.onInstalled.addListener(() => {
