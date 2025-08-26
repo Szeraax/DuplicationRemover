@@ -7,7 +7,9 @@ You can access the commands via selecting folder(s) and right clicking for the c
 
 ![command menu](/images/ContextMenu.png)
 
-## References
+## Installation
+Go to the Thunderbird addon store and install: https://addons.thunderbird.net/en-US/thunderbird/addon/duplication-remover/
 
+## References
 This addon was shamelessly derived from the MailExtensions repo: https://github.com/thunderbird/webext-examples/tree/master/manifest_v3/menu.
 
